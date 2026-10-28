@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-size: 14px; }
+  body { @apply bg-slate-50 text-slate-900; }
+  :focus-visible { outline-color: theme('colors.navy.600'); }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+  .print-break { page-break-inside: avoid; }
+}
